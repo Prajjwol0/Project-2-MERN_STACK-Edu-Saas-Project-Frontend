@@ -9,7 +9,18 @@ Reducer ko nam j xa action ko name pani tehi hunxa
 
 import {createSlice} from '@reduxjs/toolkit'
 
-createSlice({
+interface IUserInitialState {
+    name:string  | null,
+    address :string | null
+}
+
+const userInitialState : IUserInitialState = {
+    name:null,
+    address : null
+}
+
+
+const userSlice=createSlice({
  name:"userSlice",
  initialState:{
     name:"Prajjwol",
@@ -29,4 +40,7 @@ state.address="Kavre"
 
  }
 })
+
+// const{setName,setAddress} = userSlice.actions
+// export default
 

@@ -1,36 +1,41 @@
 import { createSlice } from "@reduxjs/toolkit";
-// Removed unused imports for clarity
 
-const teacherSlice = createSlice({
-    name: "teacherSlice",
-    initialState: {
-        teacherName: "",
-        teacherPassword: ""
-    },
-    reducers: {
-        setTeacherName(state, action) {
-            state.teacherName = action.payload;
-            // state.teacherName="haha"
-        },
-        setTeacherPassword(state, action) {
-            state.teacherPassword = action.payload;
-            // state.teacherPassword="hehe"
+
+const teacherSlice  = createSlice({
+    name : "teacherSlice", 
+    initialState : {
+        teacherName : "", 
+        teacherPassword : "", 
+    }, 
+    reducers : {
+        setTeacherName(state,action){
+            state.teacherName = "haha"
+        }, 
+        setTeacherPassword(state,action){
+            state.teacherPassword = "hehe"
         }
     }
-});
+})
 
-const { setTeacherName, setTeacherPassword } = teacherSlice.actions;
+// const setTeacherName = teacherSlice.actions.setTeacherName
+// const setTeacherPasssword  = teacherSlice.actions.setTeacherPassword
+const {setTeacherName,setTeacherPassword} = teacherSlice.actions
+export default teacherSlice.reducer 
+export {setTeacherName,setTeacherPassword}
+// setTeacherName()
+// const teacherSlice = {
+// createSlice functions always returns an object jaha vitra actions haru automatic generate vayerw aairako huncha 
+// note : reducer ko name j xa , actions ko name pani smae tehi nahi huncha action invoke garne bitikai vitra reducer automatic call huncha 
 
-// CreateSlice functions always returns an object jaha vitra actions haru automatic generate vayera aairako hunxa
+
 
 /* 
 FLOW 
 
-reducer ---> actionAsyncStorage
-reducer ---> communication ---> action lai call garnu parxa  
-jaile pani action call hunxa reducer hune haina 
+reducers ---> action 
 
- */
+reducer --> communication --> action lai call garnu parxa 
+jaile pani action call huncha, reducer hune hainw 
 
-export { setTeacherName, setTeacherPassword };
-export default teacherSlice.reducer;
+
+*/  
