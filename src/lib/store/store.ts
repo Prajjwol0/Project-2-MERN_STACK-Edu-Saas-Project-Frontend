@@ -8,12 +8,12 @@ import userSlice from './userSlice'
 import studentSlice from './studentSlice'
 
 const store = configureStore({
-    reducer : {
-        userSlice : userSlice, 
-        studentSlice : studentSlice, 
-        teacherSlice : 
-    }
-})
+  reducer: {
+    user: userSlice,
+    student: studentSlice,
+  }
+});
+
 
 
 
