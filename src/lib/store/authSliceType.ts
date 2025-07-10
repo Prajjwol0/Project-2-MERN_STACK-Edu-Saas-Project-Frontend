@@ -1,3 +1,4 @@
+import { Status } from "../types/type"
 
 
 export interface IUserData{
@@ -8,5 +9,6 @@ export interface IUserData{
 
 
 export interface IInititalState{
-
+user:IUserData,
+status:Status
 }
