@@ -1,4 +1,4 @@
-import { Status } from "../types/type"
+import { Status } from "../../types/type"
 
 
 export interface IUserData{

@@ -1,0 +1,7 @@
+
+
+createSlice({
+    name:"teacher"
+    initialState:
+})
+
