@@ -1,14 +1,12 @@
-import { Status } from "../../types/type"
+import { Status } from "@/lib/types/type"
 
 
 export interface IUserData{
-    username:string,
-    password:string
+    username : string, 
+    password : string
 }
 
-
-
-export interface IInititalState{
-user:IUserData,
-status:Status
+export interface IInitialState{
+  user : IUserData, 
+  status : Status
 }
